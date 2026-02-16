@@ -1,13 +1,8 @@
 cmake_minimum_required(VERSION 3.15)
 project(SixSounds VERSION 0.0.1)
 
-# 1. Add JUCE (Make sure the JUCE folder is inside SixSounds)
+# Add JUCE (Make sure the JUCE folder is inside SixSounds)
 add_subdirectory(JUCE)
-
-# 2. Add Linux System Dependencies
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(FT2 REQUIRED freetype2)
-pkg_check_modules(CURL REQUIRED libcurl)
 
 # Required JUCE Boilerplate.
 juce_add_plugin(SixSounds
@@ -28,7 +23,7 @@ target_compile_definitions(SixSounds PRIVATE
     JUCE_USE_CURL=1                # Ensures CURL is active for the build
 )
 
-# 3. Source Files
+# Source Files
 target_sources(SixSounds PRIVATE
     Source/PluginProcessor.cpp
     Source/PluginProcessor.h
@@ -36,7 +31,7 @@ target_sources(SixSounds PRIVATE
     Source/PluginEditor.h
     Source/SynthCore.h)
 
-# 4. Link Libraries & Include Directories
+# Link Libraries & Include Directories
 target_include_directories(SixSounds PRIVATE 
     ${FT2_INCLUDE_DIRS}
     ${CURL_INCLUDE_DIRS})
