@@ -8,7 +8,11 @@ I wanted something that was like the Opsix, and like Six Sines, but was:
 
 Because of that, I eventually got this synth out of the AI, with a lot of testing and checking through the process. I also (despite my best efforts) did learn a little bit about how JUCE functions.
 
-Notes:
+It looks like this:
+![alt text](https://github.com/echoe/six_sounds/blob/main/picture/six_sounds_002.png?raw=true)
+
+
+Features:
 
 The sound routes sequentially down. The volume sliders at the end of each mod matrix row will let that oscillator be heard without any filtering, though, if you want. In this way it can both process sequentially and in parallel.
 
@@ -16,6 +20,9 @@ The context knobs don't re-title themselves right now. They are:
 Sine: -C1 is Phase. There are no other options.
 LoPass: C1 is Cutoff, and C2 is Resonance. TRK controls the amount of key tracking.
 Comb: C1 is Feedback, and C2 is delay direction (fastforward or back). TRK controls the amount of key tracking.
+
+There are two envelopes, you can select between Env1 and Env2 for the oscillators, so you can have some different envelope things, but not too many. There are also two LFOs, which have ... I guess either eight or ten total destination options, I'm honestly not sure. You can also set up the Mod Wheel in that matrix.
+The oscillator mod matrix is sort of a waterfall going down. Most of the knobs probably shouldn't be there but I am fine with it, so sue me.
 
 Disclaimers:
 -This is the result of two days of doing this (it's actually the first time I have vibecoded anything for any reason).
@@ -28,7 +35,7 @@ To install:
 To build:
 
 Linux:
-Make sure you have all required things to run JUCE on your machine; put the JUCE folder from a JUCE download in the same level as this folder; and then just run ./build.sh .
+Make sure you have all required things to run JUCE on your machine; put the JUCE folder from [a JUCE download](https://github.com/juce-framework/JUCE/releases/tag/8.0.12) in the same level as this folder; and then just run ./build.sh .
 
 MacOS:
 Download and add the JUCE folder as above, and install cmake:
@@ -39,8 +46,9 @@ Remove the parts of the CMake file that call out Linux binaries specifically.
 Then simply run the build.sh script.
 
 Windows:
-Download and add the JUCE folder as above. I decided to use VS Code, so install that, and then download and install the build tools for Visual Studio https://visualstudio.microsoft.com/downloads/ .
+Download and add the JUCE folder as above, putting it into the same folder as the repo. I decided to use VS Code, so install that, and then download and install the build tools for Visual Studio https://visualstudio.microsoft.com/downloads/ .
 
 Open your six_sounds folder in VS Code.
-Remove the parts of the CMake file that call out Linux binaries specifically (lines 6 to 8).
-Select your compiler you installed, then just click build.
+ctrl+shift+p, CMake: Select a Kit, and select the VSCode stuff you just installed.
+Remove the parts of the CMake file that call out Linux binaries specifically.
+... Click build.
