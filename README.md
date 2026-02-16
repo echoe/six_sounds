@@ -8,7 +8,7 @@ I wanted something that was like the Opsix, and like Six Sines, but was:
 
 -Worked on Linux
 
-Because of that, I made this synth!
+Because of that, I eventually got this synth out of the AI, with a lot of testing and checking through the process.
 
 Notes:
 
