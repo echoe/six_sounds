@@ -14,23 +14,26 @@ It looks like this:
 
 Features:
 
-The sound routes sequentially down. The volume sliders at the end of each mod matrix row will let that oscillator be heard without any filtering, though, if you want. In this way it can both process sequentially and in parallel.
+*The synth defaults to every 'OUT' switch being off. This means that to hear the default patch (a single sine wave) you will have to raise the 'OUT' slider on the far right from the first oscillator!!*
+
+The sound from each oscillator routes sequentially down to the next. The volume sliders at the end of each mod matrix row will let that oscillator be heard without any filtering from the next oscillators in the chain - in this way, the synth can both process sound sequentially and in parallel.
 
 The context knobs don't re-title themselves right now. They are:
 Sine: -C1 is Phase. There are no other options.
 LoPass: C1 is Cutoff, and C2 is Resonance. TRK controls the amount of key tracking.
 Comb: C1 is Feedback, and C2 is delay direction (fastforward or back). TRK controls the amount of key tracking.
 
-There are two envelopes, you can select between Env1 and Env2 for the oscillators, so you can have some different envelope things, but not too many. There are also two LFOs, which have ... I guess either eight or ten total destination options, I'm honestly not sure. You can also set up the Mod Wheel in that matrix.
-The oscillator mod matrix is sort of a waterfall going down. Most of the knobs probably shouldn't be there but I am fine with it, so sue me.
+There are two envelopes, and you can select between Env1 and Env2 for the oscillators, so you can have some different envelope things. Not as many as Dexed. YMMV.
+
+There are also two LFOs, which have ... I guess either eight or ten total destination options, I'm honestly not sure. You can also set up the Mod Wheel in that matrix.
 
 Disclaimers:
--This is the result of two days of doing this (it's actually the first time I have vibecoded anything for any reason).
--I have only tested this on Linux really (I havent even test installed it on windows yet), it's just much easier to build a thousand times and check everything there since I wrote a helper script to automatically install the VST into my .vst3 folder.
--I am not sure that everything works as shown. But it /appears/ to. Or it did at one point.
+-This is the result of two days of doing this (it's actually the first time I have vibecoded anything for any reason). I also had to hand write some of the visualization code because the robot wouldn't do it, so if that's breaking, it's probably my fault. Oops.
+-It seems like it takes up a lot of CPU power. Fair warning!
+-I am not sure that everything works as shown. But it /appears/ to. Or it did at one point!! Yeah.
 
 To install:
--It is a vst3 synth. drop it wherever your vst3 folder is.
+-Drop the vst3 folder into wherever your vst3 folder is.
 
 To build:
 
