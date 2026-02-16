@@ -29,3 +29,8 @@ brew install cmake
 
 Remove the parts of the CMake file that call out Linux binaries specifically.
 Then simply run the build.sh script.
+
+Windows:
+Download and add the JUCE folder as above. I decided to use VS Code, so install that, and then download and install the build tools for Visual Studio https://visualstudio.microsoft.com/downloads/ .
+
+Open your six_sounds folder in VS Code. Select your compiler you installed, then just click build :)
