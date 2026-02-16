@@ -1,8 +1,13 @@
 cmake_minimum_required(VERSION 3.15)
-project(SixSounds VERSION 0.0.1)
+project(SixSounds VERSION 0.0.2)
 
 # Add JUCE (Make sure the JUCE folder is inside SixSounds)
 add_subdirectory(JUCE)
+
+# Linux Dependencies. These need to be removed to build this on windows or mac
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(FT2 REQUIRED freetype2)
+pkg_check_modules(CURL REQUIRED libcurl)
 
 # Required JUCE Boilerplate.
 juce_add_plugin(SixSounds
