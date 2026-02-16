@@ -17,6 +17,11 @@ The sound routes sequentially down. The volume sliders at the end of each mod ma
 Disclaimer:
 This is the result of one day of doing this (it's actually the first time I have vibecoded anything for any reason). I purposefully have made the envelopes very simple - there's just a single one. I really don't use envelopes in a complicated way too much. There also is no modulation (... this is the top priority, if I attempt to make this for a whole second day).
 
+I have only tested this on Linux really (I havent even test installed it on windows yet).
+
+To install:
+-It is a vst3 synth. drop it wherever your vst3 folder is.
+
 To build:
 
 Linux:
